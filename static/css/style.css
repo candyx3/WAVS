@@ -1,0 +1,143 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #fff; /* Light text */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* If you want a background image with dark theme, adjust accordingly */
+    /* background-image: url('img/dark-bg.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(30, 30, 30, 0.8); /* Darker container background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Stronger shadow for dark theme */
+    border-radius: 8px;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.9); /* Even darker header */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 3px solid #64dd17; /* Neon green accent color */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #64dd17; /* Neon green hover */
+    color: #000; /* Black text on hover */
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #fff; /* White text for table */
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #666; /* Darker border for table */
+}
+
+th {
+    background-color: #64dd17; /* Neon green for table header */
+    color: #000; /* Black text for table header */
+}
+
+tr:hover {
+    background-color: #333; /* Darker hover effect */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #64dd17; /* Neon green button */
+    color: #000; /* Black text for button */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #4caf50; /* Slightly darker green on hover */
+    color: #fff; /* White text on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9); /* Darker footer */
+    color: #fff;
+    border-top: 3px solid #64dd17; /* Neon green border */
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #555; /* Darker border for input */
+    border-radius: 5px;
+    width: 60%;
+    margin-bottom: 10px;
+    background-color: #333; /* Dark input background */
+    color: #fff; /* White input text */
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #64dd17; /* Neon green submit button */
+    color: #000; /* Black text for submit button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #4caf50; /* Slightly darker green on hover */
+    color: #fff; /* White text on hover */
+}

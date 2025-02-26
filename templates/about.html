@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About WAVS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Add some custom styles for the about page */
+        .about-container {
+            background-color: rgba(30, 30, 30, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            color: #eee;
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center items horizontally */
+        }
+
+        .about-container h1 {
+            font-size: 3em; /* Larger title */
+            margin-bottom: 20px;
+            color: #64dd17;
+            text-shadow: 0 0 10px rgba(100, 221, 23, 0.5);
+            text-align: center;
+        }
+
+        .about-container p {
+            font-size: 1.2em; /* Larger paragraph text */
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: center; /* Center the text */
+            max-width: 800px; /* Limit the width of the text */
+        }
+
+        .about-container h2 {
+            font-size: 2em;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            color: #64dd17;
+            text-align: center;
+        }
+
+        .about-container ul {
+            list-style: none; /* Remove bullet points */
+            padding: 0;
+            margin-bottom: 30px;
+            display: flex; /* Use flexbox for horizontal layout */
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            justify-content: center; /* Distribute items evenly */
+        }
+
+        .about-container li {
+            font-size: 1.1em;
+            margin: 10px 20px;
+            padding: 15px;
+            background-color: rgba(50, 50, 50, 0.8); /* Darker background for list items */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 250px; /* Set a fixed width for list items */
+        }
+
+        .about-container li strong {
+            color: #64dd17; /* Neon green for feature names */
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .about-container .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background-color: #64dd17;
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 20px;
+        }
+
+        .about-container .btn:hover {
+            background-color: #4caf50;
+            transform: scale(1.1);
+        }
+
+        .about-container .made-by {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.2em;
+            color: #64dd17;
+            text-shadow: 0 0 5px rgba(100, 221, 23, 0.8);
+            animation: pulse 2s linear infinite,
+                       flicker 3s linear infinite;
+        }
+
+        /* Keyframes for the pulse animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Keyframes for the flicker animation */
+        @keyframes flicker {
+            0% { text-shadow: 0 0 5px rgba(100, 221, 23, 0.8); }
+            2% { text-shadow: none; }
+            4% { text-shadow: 0 0 5px rgba(100, 221, 23, 0.8); }
+            /* ... more flicker points ... */
+            100% { text-shadow: 0 0 5px rgba(100, 221, 23, 0.8); }
+        }
+    </style>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <div class="about-container">
+        <h1>About WAVS</h1>
+        <p>WAVS is a powerful web application vulnerability scanner designed to help you identify potential security weaknesses in your web applications. It provides a comprehensive suite of tools to detect common vulnerabilities and assess the overall security posture of your web applications.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>SQL Injection Scanning</strong>Detects SQL Injection vulnerabilities by injecting malicious SQL code into input fields and analyzing the application's response.</li>
+            <li><strong>Cross-Site Scripting (XSS) Scanning</strong>Identifies XSS vulnerabilities by injecting JavaScript code into input fields and analyzing the application's behavior.</li>
+            <li><strong>Cross-Site Request Forgery (CSRF) Detection</strong>Detects CSRF vulnerabilities by analyzing forms and checking for the presence of CSRF tokens.</li>
+            <li><strong>Server-Side Request Forgery (SSRF) Detection</strong>Identifies SSRF vulnerabilities by attempting to make requests to internal resources and external websites.</li>
+            <li><strong>Open Redirect Detection</strong>Detects Open Redirect vulnerabilities by analyzing URLs and checking for redirection to untrusted websites.</li>
+            <li><strong>Port Scanning</strong>Scans a range of ports on the target host to identify open ports and potential services running on those ports.</li>
+        </ul>
+
+        <p>This tool is intended for educational and testing purposes only. Use it responsibly and ethically. Unauthorized use of this tool may violate applicable laws and regulations.</p>
+
+        <a href="{{ url_for('index') }}" class="btn">Back to Home</a>
+        <p class="made-by">Made by candyx3</p>
+    </div>
+    {% endblock %}
+</body>
+</html>
