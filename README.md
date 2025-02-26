@@ -40,7 +40,7 @@ web-app-vulnerability-scanner
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/web-app-vulnerability-scanner.git
+   git clone https://github.com/candyx3/WAVS.git
    cd web-app-vulnerability-scanner
    ```
 
